@@ -21,7 +21,7 @@ public class Main {
         Printer.print("doubleVectorSize25 = " + doubleVectorSize25.getArray().length);
 
         DoubleVector doubleVectorFromArray = VectorCreator.vectorCreate(new double[0]);
-        Printer.print("doubleVectorFromArray (size = 0) = -" + doubleVectorFromArray.getArray().length);
+        Printer.print("doubleVectorFromArray (size = 0) = " + doubleVectorFromArray.getArray().length);
 
         RandomInitializer.initRandomArray(defaultVector, -10, 10);
         Printer.print(defaultVector.toString());
@@ -30,16 +30,16 @@ public class Main {
                 "\\training\\dmitriysedin\\tasks\\maintask01\\controller\\util\\testArray");
         Printer.print("initFromFile = " + doubleVectorSize25.toString());
 
-        Printer.print("max element = " + +DoubleVectorReverse.findMaxElement(defaultVector));
+        Printer.print("max element = " + DoubleVectorFinder.findMaxElement(defaultVector));
 
-        Printer.print("average = " + DoubleVectorReverse.findAverage(defaultVector));
+        Printer.print("average = " + DoubleVectorFinder.findAverage(defaultVector));
 
-        Printer.print("isAscendingSorted = " + DoubleVectorReverse.isAscendingSorted(defaultVector));
+        Printer.print("isAscendingSorted = " + DoubleVectorCheker.isAscendingSorted(defaultVector));
 
         DoubleVectorReverse.reverse(defaultVector);
         Printer.print(defaultVector);
 
-        DoubleVectorReverse.selectionSortAscending(defaultVector);
+        DoubleVectorSorter.selectionSortAscending(defaultVector);
         Printer.print(defaultVector);
     }
 }
